@@ -55,7 +55,8 @@ merge_train_and_test_and_summarize <- function() {
   # calculate mean of all variables by activity and subject
   summarized <- ddply(grouped_by_activity_name_and_subject, 
                   c("Activity_Name", "Subject", "variable"), summarise, mean = mean(value))
-  write.table(summarized, file="means_by_activity_and_subject.txt", row.names = FALSE)
+  tidy <- spread(summarized, key=variable, value=mean)
+  write.table(tidy, file="means_by_activity_and_subject.txt", row.names = FALSE)
   
   
   
