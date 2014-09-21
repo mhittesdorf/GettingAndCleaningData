@@ -15,7 +15,7 @@ The output file 'means_by_activity_and_subject.txt' was produced by the script '
 
 The tidy data set produced in step 5 is written to disk with the write.table() command where row.names = FALSE
 
-To execute the script, first source the 'run_analysis.R' script then run the function 'merge_train_and_test_and_summarize'. 
+To execute the script, first set the R working directory to the 'UCI HAR Dataset' subdirectory, source the 'run_analysis.R' script then run the function 'merge_train_and_test_and_summarize()'. 
 
 ## Variable definitions
 

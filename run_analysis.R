@@ -1,5 +1,7 @@
-# load dplyr library
+# load required packages
+library(plyr)
 library(dplyr)
+library(reshape2)
 
 # merge datasets - first training files, then testing files
 merge_train_and_test_and_summarize <- function() {
@@ -46,8 +48,6 @@ merge_train_and_test_and_summarize <- function() {
   
   # create second independent tidy data set with the average of each variable for each 
   # activity and each subject
-  library(plyr)
-  library(reshape2)
   
   # melt table (groups by Activity_Name and Subject columns)
   grouped_by_activity_name_and_subject <- melt(train_and_test, id.vars=c("Activity_Name", "Subject"))
