@@ -24,7 +24,7 @@ The output file contains the following variables, which serve as the column name
 Activity_Name - the activity performed by the test subject. Valid values are defined in the file 'activity_labels.txt' supplied with the raw data.
 Subject - a unique identifier assigned to each test subject
 
-These fields are defined in the file 'features_info.txt' also supplied with the raw data:
+The following fields are defined in the file 'features_info.txt' also supplied with the raw data. Note that the accelerometer measurements (i.e. those with 'acc' in the variable name) have units of standard gravity (g), while the gyroscopic measurements (i.e. those witih Gyro in the variable name) have units of radians/sec. 
 
 1.  tBodyAcc-mean()-X
 2.  tBodyAcc-mean()-Y
